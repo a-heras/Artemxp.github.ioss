@@ -1,6 +1,6 @@
 html, body{
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
     color: #fff;
     font-family: 'Raleway', Arial, sans-serif;
     height: 100%;
@@ -8,11 +8,11 @@ html, body{
 }
 
 .container{
-  display: flex;
-  flex-direction: column;
-  background: url(img/fon.jpg) no-repeat center center;
-  background-size: cover;
-  min-height:100%;
+    display: flex;
+    flex-direction: column;
+    background: url(img/fon.jpg) no-repeat center center;
+    background-size: cover;
+    min-height:100%;
 
 }
 .overlay{
@@ -34,7 +34,6 @@ html, body{
 }
 .popup-modal{
     margin-top: 30px;
-
     position:fixed;
     z-index: 123;
     border: 2px solid #fa6200;
@@ -42,11 +41,10 @@ html, body{
 }
 
 .open{
-display: flex;
-
+    display: flex;
     }
 .popup-form{
-  background: #fff;
+    background: #fff;
     color: #14171a;
     max-width: 590px;
     padding: 10px;
@@ -54,7 +52,7 @@ display: flex;
 
     }
 .popup-form h4{
-  margin: 5px;
+    margin: 5px;
 
 }
 .popup-form p {
@@ -72,7 +70,7 @@ display: flex;
 
 }
 .popup-form-input-err{
-  outline: 1px solid #b94a48;
+    outline: 1px solid #b94a48;
 }
 .popup-form-button{
     box-shadow: inset 0 -3px 0 rgba(0,0,0,0.15);

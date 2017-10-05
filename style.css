@@ -88,7 +88,7 @@ html, body{
     flex-wrap: wrap;
     text-align: center;
     border-bottom: 2px solid #fa6200;
-
+    height: 100%;
     align-items: center;
 }
 .logo{

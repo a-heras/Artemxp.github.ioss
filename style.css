@@ -13,6 +13,8 @@ html, body{
     background: url(img/fon.jpg) no-repeat center center;
     background-size: cover;
     min-height:100%;
+    justify-content: center;
+    align-items: center;
 
 }
 .overlay{
@@ -24,29 +26,31 @@ html, body{
     left: 0;
     top: 0;
     cursor: pointer;
-    display: none;
+      display: none;
 }
-.wrapper-modal{
-    display: none;
-    justify-content: center;
 
-
-}
 .popup-modal{
-    margin-top: 30px;
-    position:fixed;
-    z-index: 123;
+    position: fixed;
+    z-index: 120;
     border: 2px solid #fa6200;
-
+    justify-content: center;
+    align-items: center;
+      display: none;
+      max-width: 690px;
+      background: #fff;
+      color: #14171a;
+      padding: 10px;
+      text-align: center;
 }
 
 .open{
-    display: flex;
+    display: block;;
     }
 .popup-form{
+    display: none;
+    max-width: 690px;
     background: #fff;
     color: #14171a;
-    max-width: 590px;
     padding: 10px;
     text-align: center;
 
@@ -66,7 +70,7 @@ html, body{
     border-radius: 4px;
     padding: 0 10px;
     height: 40px;
-    margin: 10px;
+    margin: 10px 0;
 
 }
 .popup-form-input-err{
@@ -88,8 +92,8 @@ html, body{
     flex-wrap: wrap;
     text-align: center;
     border-bottom: 2px solid #fa6200;
-    height: 100%;
     align-items: center;
+    width: 100%;
 }
 .logo{
     flex-basis: 120px;
@@ -192,7 +196,8 @@ footer{
     flex-wrap: wrap;
     justify-content: center;
     min-height: 70px;
-    height: 100%;
+    width: 100%;
+
     align-items: center;
 
 }

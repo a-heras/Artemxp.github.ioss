@@ -48,11 +48,6 @@ html, body{
     }
 .popup-form{
     display: none;
-    max-width: 690px;
-    background: #fff;
-    color: #14171a;
-    padding: 10px;
-    text-align: center;
 
     }
 .popup-form h4{

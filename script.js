@@ -6,7 +6,6 @@
         popup.popupModal = document.querySelector(options.popupModal)
 
         this.open = function (content) {
-            popup.popupModal.innerHTML = content;
             popup.overlay.classList.add('open');
             popup.popupModal.classList.add('open');
 
@@ -19,25 +18,49 @@
 
     }
 
-    var p = new Popup({
-      overlay: '.overlay',
-      popupModal: '.popup-modal',
-    });
-
-    document.querySelector('.button').onclick = function() {
-      var form = document.querySelector('form');
-      p.open(form.innerHTML);
-    };
-
-    var input = document.querySelectorAll('.popup-form-input'),
-        form = document.querySelector('.popup-modal');
-
-          form.onclick = function () {
-              alert('1');
-          }
-        form.onsubmit = function(e) {
-          alert('1');
+    function Check(options) {
+        var check = this;
+        check.form = document.querySelector(options.formCheck);
+        check.input = document.querySelectorAll(options.inputCheck);
+        check.fieldOutputError = document.querySelector(options.fieldOutputError);
+        this.methodCheck = function () {
+            check.form.onsubmit = function (e) {
+                for (var i = 0; i < check.input.length; i++) {
+                  var error = false;
+                  var textError;
+                  check.input[i].value = check.input[i].value.replace(/\s+/g,'');
+                  if(check.input[i].value === ''){
+                      check.input[i].classList.add('popup-form-input-err');
+                      error = true;
+                      textError = 'Внимание! Убедитесь, что контактные данные введены верно.';
+                  }
+                  else{
+                      check.input[i].classList.remove('popup-form-input-err');
+                  }
+                  if (error) {
+                      e.preventDefault();
+                  }
+                }
+                check.fieldOutputError.innerHTML = textError;
+            }
         }
 
-
+    }
+    var p = new Popup({
+        overlay: '.overlay',
+        popupModal: '.popup-modal',
+    });
+    var check1 = new Check({
+        formCheck: 'form',
+        inputCheck: '.popup-form-input',
+        fieldOutputError: '.popup-form p'
+    });
+    check1.methodCheck();
+    console.log(check1);
+    document.querySelector('.button').onclick = function() {
+        p.open();
+        document.querySelector('span').onclick = function() {
+            p.close();
+        }
+    };
 })();

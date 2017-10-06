@@ -14,8 +14,8 @@ html, body{
     background-size: cover;
     min-height:100%;
     align-items: center;
-
 }
+
 .overlay{
     width: 100%;
     height: 100%;
@@ -31,7 +31,7 @@ html, body{
 .popup-modal{
     display: none;
     position: fixed;
-    z-index: 120;
+    z-index: 121;
     border: 2px solid #fa6200;
     max-width: 690px;
     background: #fff;
@@ -44,31 +44,41 @@ html, body{
 
 .open{
     display: block;;
-    }
-.popup-form{
-    display: none;
+}
 
-    }
 .popup-form h4{
     margin: 5px;
-
 }
+
 .popup-form p {
     color: #d14836;
 }
+
 .close-form{
     text-align: right;
-}
-.popup-form-input{
 
+}
+
+.close-form span{
+    cursor: pointer;
+    user-select: none;
+}
+
+.popup-form-input{
+    background: #f5f8fa;
+    border: 1px solid #e6ecf0;
     border-radius: 4px;
     padding: 0 10px;
     height: 40px;
     margin: 10px 0;
+    outline: 0;
 
 }
+.popup-form-input:focus{
+    border: 2px solid #fa6200;
+}
 .popup-form-input-err{
-    outline: 1px solid #b94a48;
+    border: 2px solid #CC0033;
 }
 .popup-form-button{
     box-shadow: inset 0 -3px 0 rgba(0,0,0,0.15);
@@ -80,6 +90,7 @@ html, body{
     margin: 10px;
     cursor: pointer;
 }
+
 .header-content{
     background: rgba(0, 0, 0, 0.7);
     display: flex;
@@ -92,7 +103,6 @@ html, body{
 .logo{
     flex-basis: 120px;
     flex-grow: 1;
-
 }
 
 .info{
@@ -107,7 +117,6 @@ html, body{
 .phone{
     flex-basis: 120px;
     flex-grow: 1;
-
 }
 
 .wrapper-content{
@@ -115,7 +124,6 @@ html, body{
     flex-wrap: wrap;
     justify-content: center;
     flex: 1 0 auto;
-
 }
 .content{
     color: #14171a;
@@ -124,11 +132,7 @@ html, body{
     background: rgba(255, 255, 255, 0.8);
     padding: 10px;
     text-align: justify;
-
     border: 2px solid #fa6200;
-
-
-
 }
 .content p{
     margin: 20px;
@@ -165,7 +169,6 @@ html, body{
 .content-button{
     text-align: center;
     margin: 10% 15%;
-
 }
 .button{
     box-shadow: inset 0 -3px 0 rgba(0,0,0,0.15);
@@ -180,7 +183,6 @@ html, body{
     cursor: pointer;
     background-color:#FF9000;
     transition: all,0.15s,linear;
-
 }
 footer{
     background: #333333;
@@ -189,13 +191,10 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
     width: 100%;
     align-items: center;
-
 }
 footer a{
-
     color: #fff;
     margin: 10px;
     text-decoration: none;

@@ -40,8 +40,12 @@
                   if (error) {
                       e.preventDefault();
                   }
-                }
+                  }
+                  if (textError == undefined) {
+                      textError = '';
+                  }
                 check.fieldOutputError.innerHTML = textError;
+
             }
         }
 

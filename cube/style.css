@@ -1,0 +1,52 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: raleway, sans-serif;
+    font-size: 30px;
+    color: #fff;
+}
+.wrapper{
+    margin: 80px;
+    perspective: 900px;
+}
+.cube{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-origin: 50% 50% -150px;
+    transform: rotate3d(1,1,1,50deg);
+    transform-style: preserve-3d;
+}
+.cube-party{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 0, 0, 0.4);
+    background: radial-gradient(rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.5));
+    text-align: center;
+    line-height: 300px;
+    transform-origin: 50% 50% -150px;
+    border: 1px solid #fff;
+    text-shadow: 0 1px 3px rgba(255,0,255, 0.5);
+    box-shadow: 0, 0, 8px rgba(0, 0, 0, 0.5);
+}
+.party-1{
+
+}
+.party-2{
+    transform: rotateY(90deg);
+}
+.party-3{
+    transform: rotateY(-90deg);
+}
+
+.party-4{
+    transform: rotateX(90deg);
+}
+
+.party-5{
+  transform: rotateX(-90deg);
+}
+.party-6{
+    transform: rotateY(-180deg);
+}

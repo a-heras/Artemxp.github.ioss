@@ -24,7 +24,17 @@ html, body{
     display: flex;
     flex-direction: column;
 
-
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    z-index: 120;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    display: none;
 }
 header{
     background: url(img/fon.png) center no-repeat;
@@ -62,13 +72,13 @@ header::before{
     display: inline-block;
 }
 .nav-menu li a{
-  box-sizing: border-box;
-  padding: 25px 25px 0 25px;;
-  height: 75px;
-  color: #fff;
-  border-bottom: 1px solid #fff;
-  text-decoration: none;
-  display: block;
+    box-sizing: border-box;
+    padding: 25px 25px 0 25px;;
+    height: 75px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    text-decoration: none;
+    display: block;
 }
 .button-call-me{
     border: 1px solid #fff;
@@ -102,13 +112,153 @@ header::before{
 }
 .content{
     text-align: center;
-    height: 800px;
+    height: 100%;
 
 }
 .content h1{
     margin-top: 100px;
+    font-size: 30px;
 }
-.portfoli{
+.portfolio{
     margin-top: 30px;
     border-top: 1px solid #000;
+
+}
+.portfolio-menu li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 10px;
+    padding: 20px;
+    border-top: 2px solid #000;
+}
+.wrapper-content{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.row{
+
+}
+
+.relation{
+    position: relative;
+}
+
+.relation__offset{
+    height: 0;
+}
+.relation__content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.row .relation__offset{
+    padding-top: 50%;
+}
+
+.relation__content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+.big{
+    background: rgba(21,21,21, 0.7);
+    flex: 1 1 100%;
+    width: 30%;
+}
+.big:first-child{
+    margin-left: 2.7%;
+}
+.spetialization {
+
+    width: 100%;
+    height: 100%;
+
+}
+.spetialization p{
+    margin: 20px 10px ;
+    font-size: 16px;
+}
+.wrapper-tools{
+    display: flex;
+
+    justify-content: center;
+}
+.tools{
+    border-top: 1px solid #000;
+    margin: 10px ;
+    max-width: 500px;
+
+
+}
+.tools p {
+    text-align: justify;
+    font-size: 14px;
+    margin: 20px 10px 0 10px;
+
+}
+.tools-img{
+    margin-top: 10px;
+}
+.tools-img img{
+    width: 90%;
+}
+
+.tools-menu{
+
+
+}
+.tools-menu li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-top: 2px solid #000;
+}
+.wrapper-review{
+    margin: 0 auto;
+    max-width: 650px;
+}
+.wrapper-review p{
+    font-size: 16px;
+    margin: 40px 10px;
+    text-align: justify;
+}
+.people{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px;
+}
+.people img{
+    margin: 10px;
+}
+.people-comment p{
+    font-size: 14px;
+    margin: 10px;
+    text-align: left;
+}
+footer{
+    padding: 10px;
+    background: #2d2d2d;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+footer p{
+    margin-top: 30px;
+}
+.logo2{
+    margin: 20px 10px;
+}
+@media screen and (max-width: 1024px){
+  .wrapper-tools{
+      flex-wrap: wrap;
+
+  }
 }

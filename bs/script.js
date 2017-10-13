@@ -1,6 +1,19 @@
-(function () {
-
-    document.querySelector('iframe').onclick = function () {
-        alert('1');
-    };
-})();
+$(function () {
+  $('.owl-carousel').owlCarousel({
+        items:1,
+        merge:false,
+        loop:true,
+        margin:10,
+        video:true,
+        lazyLoad:true,
+        center:true,
+        responsive:{
+            480:{
+                items:1
+            },
+            600:{
+                items:3
+            }
+        }
+    });
+});

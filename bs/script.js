@@ -4,7 +4,7 @@ $(function () {
         merge:false,
         loop:true,
         margin:10,
-        video:true,
+        video:false,
         lazyLoad:true,
         center:true,
         responsive:{

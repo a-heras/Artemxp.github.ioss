@@ -25,11 +25,13 @@ $(function () {
         popupModal: '.popup-modal'
     });
 
-    var iframe = $('iframe');
+    var iframeVideo = $('.wrapper-player');
     $('.play').on('click', function(){
+
         var attr = $(this).attr('data-video');
-        iframe.attr('src', attr);
-        p.open(iframe);
+
+        $('iframe').attr('src', attr);
+        p.open(iframeVideo.html());
     });
     console.log($('.close img'));
 
@@ -42,4 +44,12 @@ $(function () {
             p.close();
         });
     });
+    function resizeIframe(){
+        $('iframe').each(function() {
+            var width = $(this).width ();
+            $(this).css("height", width / 1.7777 + "px");
+        });
+    };
+    $(window).resize(resizeIframe);
+    resizeIframe();
 });

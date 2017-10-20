@@ -46,7 +46,7 @@ html, body{
     color: #14171a;
     margin-top: 30px;
     padding: 20px;
-    text-align: center;
+
 
 
 }
@@ -60,36 +60,40 @@ html, body{
 .close img{
     cursor: pointer;
 }
-.wrapper-zakaz{
+.wrapper-caption{
     display: flex;
     align-items: center;
 }
-.wrapper-zakaz span {
+.wrapper-caption span {
     font-size: 18px;
     margin-left: 20px;
 }
 .form-call-me input{
     border: 1px solid #e6ecf0;
     border-radius: 4px;
-
     padding: 0 10px;
     height: 40px;
     margin: 10px 0;
     outline: 0;
 }
 .form-call-me button{
-  border: 1px solid #e6ecf0;
-  background: none;
-  height: 40px;
-  padding: 10px;
-  margin: 10px 0;
-  outline: none;
-  cursor: pointer;
-  transition: 0.5s;
+    border: 1px solid #e6ecf0;
+    background: none;
+    height: 40px;
+    padding: 10px;
+    margin: 10px 0;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
 }
+.player{
 
-.wrapper-iframe{
-
+}
+.player iframe{
+     width: 100%;
+}
+.name-video p{
+    margin: 10px;
 }
 .open{
     display: block;
@@ -218,8 +222,8 @@ header::before{
 
 }
 .portfolio-menu li:hover{
-      border-top: 2px solid #000;
-      transition: .15s ease-in-out;
+    border-top: 2px solid #000;
+    transition: .15s ease-in-out;
 }
 
 .wrapper-content{

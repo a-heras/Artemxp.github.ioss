@@ -38,24 +38,40 @@
                 </div>
             </div>
         </div>
-
-            <header>
-                <div class="header-content">
-                    <nav class="nav-menu-content">
-                        <ul class="nav-menu">
-                            <li><a href="#">Главная</a></li>
-                            <li><a href="#">Контакты</a></li>
-                            <li><button type="button" class="button-call-me">ПЕРЕЗВОНИТЕ МНЕ</button></li>
-                        </ul>
-                    </nav>
-                    <div class="logo">
-                        <img src="img/logo.png" alt="">
-                        <p>МЫ СОЗДАЕМ КОММЕРЧЕСКИЕ ВИДЕО И ПОМОГАЕМ ПОВЫСИТЬ<br>
-                            конкурентное преимущество вашей компании</p>
-                    </div>
-                    <div class="price"><button class="button-price" type="button">УЗНАТЬ СТОИМОСТЬ</button></div>
+        <div class="wrapper-get-price">
+            <div class="call-me">
+                <div class="close">
+                    <img src="img/close.png" alt="закрыть">
                 </div>
-            </header>
+                <div class="wrapper-caption">
+                    <img src="img/price-icon.png" alt=""> <!-- замените на свою иконку или уберите -->
+                    <span>УЗНАТЬ СТОИМОСТЬ</span>
+                </div>
+                <form class="form-call-me" action="index.html" method="post">
+                    <input type="text" name="name" placeholder="Ваше имя" required><br>
+                    <input type="email" name="email" placeholder="Ваш e-mail" required><br>
+                    <textarea name="message" placeholder="Какой проект вас интересует?" style="width: 100%; border: 1px solid #e6ecf0; border-radius: 4px; padding: 10px; outline: 0; margin: 10px 0; min-height: 80px;"></textarea><br>
+                    <button type="submit">ПОЛУЧИТЬ РАСЧЕТ</button>
+                </form>
+            </div>
+        </div>
+        <header>
+            <div class="header-content">
+                <nav class="nav-menu-content">
+                    <ul class="nav-menu">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><button type="button" class="button-call-me">ПЕРЕЗВОНИТЕ МНЕ</button></li>
+                    </ul>
+                </nav>
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                    <p>МЫ СОЗДАЕМ КОММЕРЧЕСКИЕ ВИДЕО И ПОМОГАЕМ ПОВЫСИТЬ<br>
+                        конкурентное преимущество вашей компании</p>
+                </div>
+                <div class="price"><button class="button-price" type="button">УЗНАТЬ СТОИМОСТЬ</button></div>
+            </div>
+        </header>
             <div class="content">
                 <h1>ПРИМЕРЫ РАБОТ<br>И ВЫПОЛНЕННЫЕ ПРОЕКТЫ</h1>
                 <section class="portfolio">

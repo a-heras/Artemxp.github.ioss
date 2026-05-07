@@ -1,58 +1,55 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>buisness_shots</title>
-    </head>
-    <body>
-        <div class="container">
-            <div class="overlay">
-            </div>
-            <div class="popup-modal">
-            </div>
-            <div class="wrapper-call-me">
-                <div class="call-me">
-                    <div class="close">
-                        <img src="img/close.png" alt="">
-                    </div>
-                    <div class="wrapper-caption">
-                        <img src="img/phone.png" alt="">
-                        <span>ЗАКАЗ ОБРАТНОГО ЗВОНКА</span>
-                    </div>
-                    <form class="form-call-me" action="index.html" method="post">
-                        <input type="text" value="" placeholder="Как Вас зовут"><br>
-                        <input type="text" value="" placeholder="Ваш номер телефона"><br>
-                        <button type="submit">ПЕРЕЗВОНИТЕ МНЕ</button>
-                    </form>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Business Shots — Коммерческое видео</title>
+</head>
+<body>
+    <div class="container">
+        <div class="overlay"></div>
+        <div class="popup-modal"></div>
+        <div class="wrapper-call-me">
+            <div class="call-me">
+                <div class="close"><img src="img/close.png" alt="закрыть"></div>
+                <div class="wrapper-caption">
+                    <img src="img/phone.png" alt="">
+                    <span>ЗАКАЗ ОБРАТНОГО ЗВОНКА</span>
                 </div>
+                <form class="form-call-me" action="#" method="post">
+                    <input type="text" name="name" placeholder="Как Вас зовут" required>
+                    <input type="tel" name="phone" placeholder="Ваш номер телефона" required>
+                    <button type="submit">ПЕРЕЗВОНИТЕ МНЕ</button>
+                </form>
             </div>
-        <div class="wrapper-player" style="display: none;">
+        </div>
+
+        <div class="wrapper-get-price">
+            <div class="call-me">
+                <div class="close"><img src="img/close.png" alt="закрыть"></div>
+                <div class="wrapper-caption">
+                    <img src="img/price-icon.png" alt=""> 
+                    <span>УЗНАТЬ СТОИМОСТЬ</span>
+                </div>
+                <form class="form-call-me" action="#" method="post">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                    <input type="email" name="email" placeholder="Ваш e-mail" required>
+                    <textarea name="message" placeholder="Какой проект вас интересует?"></textarea>
+                    <button type="submit">ПОЛУЧИТЬ РАСЧЕТ</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="wrapper-player">
             <div class="player">
-                <iframe src="https://www.youtube.com/embed/Qxjg521GwAc" frameborder="0" allowfullscreen></iframe>
+                <iframe src="" frameborder="0" allowfullscreen></iframe>
                 <div class="name-video">
                     <p>Land Rover Stage One V8 “Sunset Surf Ride”</p>
                 </div>
                 <div class="description-video">
-                    <p>Здесь будет описание видео. Это, главным образом, грамотный подход к производству документальных, корпоративных, презентационных, рекламных и отчетных роликов и видеоинструкций. Создание видеоматериалов высокого уровня по выставкам, мастер-классам, тренингам, конференциям и презентациям. </p>
+                    <p>Профессиональный подход к производству рекламных и отчетных роликов.</p>
                 </div>
-            </div>
-        </div>
-        <div class="wrapper-get-price">
-            <div class="call-me">
-                <div class="close">
-                    <img src="img/close.png" alt="закрыть">
-                </div>
-                <div class="wrapper-caption">
-                    <img src="img/price-icon.png" alt=""> <!-- замените на свою иконку или уберите -->
-                    <span>УЗНАТЬ СТОИМОСТЬ</span>
-                </div>
-                <form class="form-call-me" action="index.html" method="post">
-                    <input type="text" name="name" placeholder="Ваше имя" required><br>
-                    <input type="email" name="email" placeholder="Ваш e-mail" required><br>
-                    <textarea name="message" placeholder="Какой проект вас интересует?" style="width: 100%; border: 1px solid #e6ecf0; border-radius: 4px; padding: 10px; outline: 0; margin: 10px 0; min-height: 80px;"></textarea><br>
-                    <button type="submit">ПОЛУЧИТЬ РАСЧЕТ</button>
-                </form>
             </div>
         </div>
         <header>
@@ -65,92 +62,86 @@
                     </ul>
                 </nav>
                 <div class="logo">
-                    <img src="img/logo.png" alt="">
+                    <img src="img/logo.png" alt="Business Shots">
                     <p>МЫ СОЗДАЕМ КОММЕРЧЕСКИЕ ВИДЕО И ПОМОГАЕМ ПОВЫСИТЬ<br>
                         конкурентное преимущество вашей компании</p>
                 </div>
-                <div class="price"><button class="button-price" type="button">УЗНАТЬ СТОИМОСТЬ</button></div>
+                <div class="price">
+                    <button class="button-price" type="button">УЗНАТЬ СТОИМОСТЬ</button>
+                </div>
             </div>
         </header>
-            <div class="content">
-                <h1>ПРИМЕРЫ РАБОТ<br>И ВЫПОЛНЕННЫЕ ПРОЕКТЫ</h1>
-                <section class="portfolio">
-                        <ul class="portfolio-menu">
-                            <li>КОРПОРАТИВНЫЕ ВИДЕО</li>
-                            <li>МЕРОПРИЯТИЯ</li>
-                            <li>ИНФОГРАФИКА</li>
-                            <li>ДРУГОЕ</li>
+
+        <main class="content">
+            <h1>ПРИМЕРЫ РАБОТ<br>И ВЫПОЛНЕННЫЕ ПРОЕКТЫ</h1>
+            
+            <section class="portfolio">
+                <ul class="portfolio-menu">
+                    <li>КОРПОРАТИВНЫЕ ВИДЕО</li>
+                    <li>МЕРОПРИЯТИЯ</li>
+                    <li>ИНФОГРАФИКА</li>
+                    <li>ДРУГОЕ</li>
+                </ul>
+                <div class="wrapper-content">
+                    <div class="row relation">
+                        <div class="relation__offset"></div>
+                        <div class="relation__content">
+                            <div class="big">
+                                <div class="play" data-video="https://www.youtube.com/embed/Qxjg521GwAc"></div>
+                            </div>
+                            <div class="big">
+                                <div class="big-text"><p>НЛМК “СПЛАВ”</p></div>
+                                <div class="play" data-video="https://youtube.com"></div>
+                            </div>
+                            <div class="big">
+                                <div class="play" data-video="https://youtube.com"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="spetialization">
+                <h1>ЧТО МЫ ДЕЛАЕМ?</h1>
+                <p>Студия Business Shots объединяет профессионалов самых разных специализаций.</p>
+                <div class="wrapper-tools">
+                    <div class="tools-img">
+                        <img src="img/tools.png" alt="Инструменты">
+                    </div>
+                    <div class="tools">
+                        <ul class="tools-menu">
+                            <li>ГИБКОСТЬ</li>
+                            <li>НАПРАВЛЕНИЯ</li>
+                            <li>ИНСТРУМЕНТЫ</li>
                         </ul>
-                        <div class="wrapper-content">
-                            <div class="row relation">
-                                <div class="relation__offset"></div>
-                                <div class="relation__content">
-                                    <div class="big" >
-                                      <div class="play" data-video="https://www.youtube.com/embed/Qxjg521GwAc"> </div>
-                                  </div>
-                                    <div class="big">
-
-                                        <div class="big-text">
-                                            <p>НЛМК “СПЛАВ”</p>
-                                        </div>
-                                        <div class="play" data-video="https://www.youtube.com/watch?v=oy18DJwy5lI"></div>
-                                    </div>
-
-
-
-                                    <div class="big"><div class="play" data-video="https://www.youtube.com/watch?v=g3J4VxWIM6s"></div></div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="spetialization">
-                        <h1>ЧТО МЫ ДЕЛАЕМ?</h1>
-                        <p>Студия Business Shots объединяет профессионалов самых разных специализаций, поэтому готова к выполнению задач любой сложности на высоком уровне. </p>
-                        <div class="wrapper-tools">
-                            <div class="tools-img">
-                                <img src="img/tools.png" alt="">
-                            </div>
-                            <div class="tools">
-                                <ul class="tools-menu">
-                                    <li>ГИБКОСТЬ</li>
-                                    <li>НАПРАВЛЕНИЯ</li>
-                                    <li>ИНСТРУМЕНТЫ</li>
-                                </ul>
-                                <p>Для создания эффектных видео в своей работе мы используем такие инструменты как:</p>
-                                <p>-  аэросъемка, придает больше масштабности, динамики и адреналина в видеоматериал любого направления</p>
-                                <p>- инфографика,  с ее помощью можно макимально эффективно донести до зрителя объемную или сложную информацию</p>
-                                <p>- графические 3D элементы, придают видео эффектности и уникальности + так же выполняют функцию донесения информации</p>
-                                <p>и многие другие.</p>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="wrapper-review">
-                        <h1>Некоторые компании и клиенты,<br>
-                          с которыми нам довелось поработать</h1>
-                              <p>“Для нас Business shots - это компания с грамотным подходом к производству корпоративных, рекламных и отчетных роликов. Мы сотрудничаем уже более трех лет и очень довольны результами.”</p>
-                            <div class="people">
-                              <div class="people-img">
-                                    <img src="img/photo.png" alt="">
-                                </div>
-                                <div class="people-comment">
-                                      <p>Алексей Михаэль,<br>директор группы строительных компаний Alpica</p>
-                                </div>
-                            </div>
-                    </section>
+                        <p>Для создания эффектных видео мы используем:</p>
+                        <p>- аэросъемка, инфографика, 3D элементы и многие другие.</p>
+                    </div>
                 </div>
+            </section>
+
+            <section class="wrapper-review">
+                <h1>Некоторые компании и клиенты,<br>с которыми нам довелось поработать</h1>
+                <p>“Для нас Business shots - это компания с грамотным подходом к производству роликов. Мы сотрудничаем уже более трех лет.”</p>
+                <div class="people">
+                    <div class="people-img"><img src="img/photo.png" alt="Алексей Михаэль"></div>
+                    <div class="people-comment">
+                        <p>Алексей Михаэль,<br>директор группы строительных компаний Alpica</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Видеосъемка в Москве и по всей России</p>
+            <p>shots.mscw@gmail.com</p>
+            <span>8(999)862-76-93</span>
+            <div class="logo2">
+                <img src="img/logo2.png" alt="Logo">
             </div>
-            <footer>
-                <p>Видеосъемка в Москве и по всей России</p>
-                <p>shots.mscw@gmail.com</p>
-                <span>8(999)862-76-93</span>
-                <div class="logo2">
-                    <img src="img/logo2.png" alt="">
-                </div>
-
-            </footer>
-        </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
-    <script src="script.js">  </script>
-    </body>
+        </footer>
+    </div>
+    <script src="https://jquery.com"></script>
+    <script src="script.js"></script>
+</body>
 </html>

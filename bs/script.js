@@ -6,8 +6,8 @@ $(function () {
 
         this.open = function(content) {
             popup.popupModal.html(content);
-            popup.overlay.fadeIn(300);
-            popup.popupModal.fadeIn(300);
+            popup.overlay.fadeIn(200);
+            popup.popupModal.fadeIn(200);
             resizeIframe();
         };
 
@@ -24,32 +24,19 @@ $(function () {
     var p = new Popup({ overlay: '.overlay', popupModal: '.popup-modal' });
 
     $('.play').on('click', function() {
-        var videoUrl = $(this).attr('data-video');
+        var url = $(this).attr('data-video');
         var template = $('.wrapper-player').clone();
-        var embedUrl = videoUrl.replace("watch?v=", "embed/");
-        template.find('iframe').attr('src', embedUrl);
-        
+        template.find('iframe').attr('src', url.replace("watch?v=", "embed/"));
         p.open(template.html());
     });
 
-    $('.button-call-me').on('click', function() {
-        p.open($('.wrapper-call-me').html());
-    });
-
-    $('.button-price').on('click', function() {
-        p.open($('.wrapper-get-price').html());
-    });
-
-    $(document).on('click', '.close img', function() {
-        p.close();
-    });
+    $('.button-call-me').on('click', function() { p.open($('.wrapper-call-me').html()); });
+    $('.button-price').on('click', function() { p.open($('.wrapper-get-price').html()); });
+    $(document).on('click', '.close img', p.close);
 
     function resizeIframe() {
-        var $iframe = $('.popup-modal iframe');
-        if ($iframe.length) {
-            $iframe.css("height", ($iframe.width() / 1.777) + "px");
-        }
+        var $if = $('.popup-modal iframe');
+        if($if.length) $if.css("height", ($if.width() / 1.77) + "px");
     }
-
     $(window).on('resize', resizeIframe);
 });

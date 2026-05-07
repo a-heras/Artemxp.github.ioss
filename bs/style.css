@@ -86,7 +86,7 @@ html, body{
     transition: 0.5s;
 }
 .wrapper-player{
-   visibility: hidden;
+   display: none;
 }
 .player iframe{
      width: 100%;

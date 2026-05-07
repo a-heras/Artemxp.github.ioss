@@ -82,6 +82,35 @@ html, body {
     right: 15px;
     cursor: pointer;
 }
+.form-call-me input,
+.form-call-me textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-call-me textarea {
+    resize: none;
+    min-height: 80px;
+}
+
+.form-call-me button {
+    width: 100%;
+    padding: 15px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.form-call-me button:hover {
+    background: #333;
+}
 
 .close::before,
 .close::after {

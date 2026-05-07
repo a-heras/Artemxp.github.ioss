@@ -66,11 +66,31 @@ html, body {
     visibility: hidden;
 }
 
-.close img {
+.close {
     width: 24px;
     height: 24px;
-    image-rendering: crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
+    position: relative;
+    cursor: pointer;
+}
+
+.close::before,
+.close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 2px;
+    background: #000;
+    transform-origin: center;
+}
+
+.close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .video-desc {

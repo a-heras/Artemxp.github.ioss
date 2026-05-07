@@ -8,18 +8,20 @@
 </head>
 <body>
     <div class="container">
+        <!-- СЛУЖЕБНЫЕ ЭЛЕМЕНТЫ -->
         <div class="overlay"></div>
         <div class="popup-modal"></div>
+
+        <!-- СКРЫТЫЕ ШАБЛОНЫ -->
         <div class="wrapper-call-me">
             <div class="call-me">
-                <div class="close"><img src="img/close.png" alt=""></div>
+                <div class="close"><img src="img/close.png" alt="x"></div>
                 <div class="wrapper-caption">
-                    <img src="img/phone.png" alt="">
                     <span>ЗАКАЗ ОБРАТНОГО ЗВОНКА</span>
                 </div>
-                <form class="form-call-me" action="#" method="post">
-                    <input type="text" placeholder="Как Вас зовут" required>
-                    <input type="tel" placeholder="Ваш номер телефона" required>
+                <form class="form-call-me">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="Телефон" required>
                     <button type="submit">ПЕРЕЗВОНИТЕ МНЕ</button>
                 </form>
             </div>
@@ -27,15 +29,14 @@
 
         <div class="wrapper-get-price">
             <div class="call-me">
-                <div class="close"><img src="img/close.png" alt=""></div>
+                <div class="close"><img src="img/close.png" alt="x"></div>
                 <div class="wrapper-caption">
-                    <img src="img/price-icon.png" alt=""> 
                     <span>УЗНАТЬ СТОИМОСТЬ</span>
                 </div>
-                <form class="form-call-me" action="#" method="post">
+                <form class="form-call-me">
                     <input type="text" placeholder="Ваше имя" required>
-                    <input type="email" placeholder="Ваш e-mail" required>
-                    <textarea placeholder="Какой проект вас интересует?"></textarea>
+                    <input type="email" placeholder="E-mail" required>
+                    <textarea placeholder="Ваш проект"></textarea>
                     <button type="submit">ПОЛУЧИТЬ РАСЧЕТ</button>
                 </form>
             </div>
@@ -44,12 +45,10 @@
         <div class="wrapper-player">
             <div class="player">
                 <iframe src="" frameborder="0" allowfullscreen></iframe>
-                <div class="name-video"><p>Land Rover Stage One V8</p></div>
-                <div class="description-video">
-                    <p>Профессиональный подход к производству рекламных и отчетных роликов.</p>
-                </div>
             </div>
         </div>
+
+        <!-- ШАПКА -->
         <header>
             <div class="header-content">
                 <nav class="nav-menu-content">
@@ -62,13 +61,15 @@
                 <div class="logo">
                     <img src="img/logo.png" alt="">
                     <p>МЫ СОЗДАЕМ КОММЕРЧЕСКИЕ ВИДЕО И ПОМОГАЕМ ПОВЫСИТЬ<br>
-                        конкурентное преимущество вашей компании</p>
+                    конкурентное преимущество вашей компании</p>
                 </div>
                 <div class="price"><button class="button-price" type="button">УЗНАТЬ СТОИМОСТЬ</button></div>
             </div>
         </header>
+
+        <!-- ПОРТФОЛИО -->
         <main class="content">
-            <h1>ПРИМЕРЫ РАБОТ<br>И ВЫПОЛНЕННЫЕ ПРОЕКТЫ</h1>
+            <h1>ПРИМЕРЫ РАБОТ И ВЫПОЛНЕННЫЕ ПРОЕКТЫ</h1>
             <section class="portfolio">
                 <ul class="portfolio-menu">
                     <li>КОРПОРАТИВНЫЕ ВИДЕО</li>
@@ -91,6 +92,8 @@
                     </div>
                 </div>
             </section>
+
+            <!-- ЧТО МЫ ДЕЛАЕМ -->
             <section class="spetialization">
                 <h1>ЧТО МЫ ДЕЛАЕМ?</h1>
                 <p>Студия Business Shots объединяет профессионалов самых разных специализаций.</p>
@@ -102,14 +105,14 @@
                             <li>НАПРАВЛЕНИЯ</li>
                             <li>ИНСТРУМЕНТЫ</li>
                         </ul>
-                        <p>Для создания видео мы используем такие инструменты как:</p>
-                        <p>- аэросъемка, инфографика, графические 3D элементы и многие другие.</p>
+                        <p>Для создания видео мы используем такие инструменты как: аэросъемка, инфографика, 3D элементы.</p>
                     </div>
                 </div>
             </section>
 
+            <!-- ОТЗЫВЫ -->
             <section class="wrapper-review">
-                <h1>Некоторые компании и клиенты,<br>с которыми нам довелось поработать</h1>
+                <h1>Некоторые компании и клиенты, с которыми нам довелось поработать</h1>
                 <p>“Для нас Business shots - это компания с грамотным подходом к производству роликов. Мы довольны результатами.”</p>
                 <div class="people">
                     <div class="people-img"><img src="img/photo.png" alt=""></div>
@@ -120,6 +123,7 @@
             </section>
         </main>
 
+        <!-- ПОДВАЛ -->
         <footer>
             <p>Видеосъемка в Москве и по всей России</p>
             <p>shots.mscw@gmail.com</p>
@@ -128,6 +132,7 @@
         </footer>
     </div>
 
+    <!-- ПОДКЛЮЧЕНИЕ СКРИПТОВ (СТРОГО В ТАКОМ ПОРЯДКЕ) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="script.js"></script>
 </body>

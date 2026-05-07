@@ -7,21 +7,20 @@
     <title>Business Shots</title>
 </head>
 <body>
-
     <div class="container">
         <div class="overlay"></div>
         <div class="popup-modal"></div>
 
+        <!-- Шаблоны -->
         <div class="wrapper-call-me">
             <div class="call-me">
-                <div class="close"><img src="img/close.png" alt=""></div>
+                <div class="close"><img src="img/close.png" alt="x"></div>
                 <div class="wrapper-caption">
-                    <img src="img/phone.png" alt="">
                     <span>ЗАКАЗ ОБРАТНОГО ЗВОНКА</span>
                 </div>
-                <form class="form-call-me" action="#" method="post">
-                    <input type="text" name="name" placeholder="Как Вас зовут" required>
-                    <input type="tel" name="phone" placeholder="Ваш номер телефона" required>
+                <form class="form-call-me">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="Телефон" required>
                     <button type="submit">ПЕРЕЗВОНИТЕ МНЕ</button>
                 </form>
             </div>
@@ -29,15 +28,14 @@
 
         <div class="wrapper-get-price">
             <div class="call-me">
-                <div class="close"><img src="img/close.png" alt=""></div>
+                <div class="close"><img src="img/close.png" alt="x"></div>
                 <div class="wrapper-caption">
-                    <img src="img/price-icon.png" alt=""> 
                     <span>УЗНАТЬ СТОИМОСТЬ</span>
                 </div>
-                <form class="form-call-me" action="#" method="post">
-                    <input type="text" name="name" placeholder="Ваше имя" required>
-                    <input type="email" name="email" placeholder="Ваш e-mail" required>
-                    <textarea name="message" placeholder="Какой проект вас интересует?"></textarea>
+                <form class="form-call-me">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="email" placeholder="E-mail" required>
+                    <textarea placeholder="Ваш проект"></textarea>
                     <button type="submit">ПОЛУЧИТЬ РАСЧЕТ</button>
                 </form>
             </div>
@@ -46,10 +44,6 @@
         <div class="wrapper-player">
             <div class="player">
                 <iframe src="" frameborder="0" allowfullscreen></iframe>
-                <div class="name-video"><p>Land Rover Stage One V8</p></div>
-                <div class="description-video">
-                    <p>Профессиональное производство видеоматериалов.</p>
-                </div>
             </div>
         </div>
 
@@ -58,7 +52,6 @@
                 <nav class="nav-menu-content">
                     <ul class="nav-menu">
                         <li><a href="#">Главная</a></li>
-                        <li><a href="#">Контакты</a></li>
                         <li><button type="button" class="button-call-me">ПЕРЕЗВОНИТЕ МНЕ</button></li>
                     </ul>
                 </nav>
@@ -73,25 +66,22 @@
         </header>
 
         <main class="content">
-            <h1>ПРИМЕРЫ РАБОТ</h1>
-            <section class="portfolio">
-                <div class="wrapper-content">
-                    <div class="relation__content">
-                        <div class="big">
-                            <div class="play" data-video="https://youtube.com"></div>
-                            <div class="big-text"><p>VIDEO ONE</p></div>
-                        </div>
-                        <div class="big">
-                            <div class="play" data-video="https://youtube.com"></div>
-                            <div class="big-text"><p>VIDEO TWO</p></div>
-                        </div>
-                        <div class="big">
-                            <div class="play" data-video="https://youtube.com"></div>
-                            <div class="big-text"><p>VIDEO THREE</p></div>
-                        </div>
+            <div class="wrapper-content">
+                <div class="relation__content">
+                    <div class="big">
+                        <div class="play" data-video="https://youtube.com"></div>
+                        <div class="big-text"><p>VIDEO ONE</p></div>
+                    </div>
+                    <div class="big">
+                        <div class="play" data-video="https://youtube.com"></div>
+                        <div class="big-text"><p>VIDEO TWO</p></div>
+                    </div>
+                    <div class="big">
+                        <div class="play" data-video="https://youtube.com"></div>
+                        <div class="big-text"><p>VIDEO THREE</p></div>
                     </div>
                 </div>
-            </section>
+            </div>
         </main>
 
         <footer>

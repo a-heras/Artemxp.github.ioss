@@ -24,11 +24,14 @@ $(function () {
     var p = new Popup({ overlay: '.overlay', popupModal: '.popup-modal' });
 
     $('.play').on('click', function() {
-        var url = $(this).attr('data-video');
+        var videoUrl = $(this).attr('data-video');
         var template = $('.wrapper-player').clone();
-        template.find('iframe').attr('src', url.replace("watch?v=", "embed/"));
+        var embedUrl = videoUrl.replace("watch?v=", "embed/");
+        
+        template.find('iframe').attr('src', embedUrl);
         p.open(template.html());
     });
+
 
     $('.button-call-me').on('click', function() { p.open($('.wrapper-call-me').html()); });
     $('.button-price').on('click', function() { p.open($('.wrapper-get-price').html()); });

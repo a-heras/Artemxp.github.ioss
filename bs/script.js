@@ -25,9 +25,11 @@ $(function () {
 
     $('.play').on('click', function() {
         var videoUrl = $(this).attr('data-video');
+        var videoDesc = $(this).attr('data-desc') || '';
         var template = $('.wrapper-player').clone();
         var embedUrl = videoUrl.replace("watch?v=", "embed/");
         template.find('iframe').attr('src', embedUrl);
+        template.find('.video-desc').text(videoDesc);
         p.open(template.html());
     });
 

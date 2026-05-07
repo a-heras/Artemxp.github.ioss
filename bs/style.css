@@ -66,10 +66,20 @@ html, body {
     visibility: hidden;
 }
 
+.call-me {
+    position: relative;
+}
+
+.player {
+    position: relative;
+}
+
 .close {
     width: 24px;
     height: 24px;
-    position: relative;
+    position: absolute;
+    top: 15px;
+    right: 15px;
     cursor: pointer;
 }
 

@@ -89,9 +89,8 @@ html, body{
     cursor: pointer;
     transition: 0.5s;
 }
-.player{
-
-}
+.wrapper-player{
+    display: none;
 .player iframe{
      width: 100%;
 }

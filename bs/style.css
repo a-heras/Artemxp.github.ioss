@@ -10,6 +10,7 @@ font-size: 13px;
 color: #14171a;
 background: #fff;
 line-height: 1.5;
+scroll-behavior: 
 }
 
 .container {
@@ -245,7 +246,10 @@ margin-bottom: 15px;
 }
 
 .close img {
-width: 20px;
+width: 24px;
+height: 24px;
+image-rendering: crisp-edges;
+image-rendering: -webkit-optimize-contrast;
 }
 
 .wrapper-caption {

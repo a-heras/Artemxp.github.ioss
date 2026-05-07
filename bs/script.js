@@ -27,19 +27,28 @@ $(function () {
         var videoUrl = $(this).attr('data-video');
         var template = $('.wrapper-player').clone();
         var embedUrl = videoUrl.replace("watch?v=", "embed/");
-        
         template.find('iframe').attr('src', embedUrl);
         p.open(template.html());
     });
 
+    $('.button-call-me').on('click', function() {
+        p.open($('.wrapper-call-me').html());
+    });
 
-    $('.button-call-me').on('click', function() { p.open($('.wrapper-call-me').html()); });
-    $('.button-price').on('click', function() { p.open($('.wrapper-get-price').html()); });
-    $(document).on('click', '.close img', p.close);
+    $('.button-price').on('click', function() {
+        p.open($('.wrapper-get-price').html());
+    });
+
+    $(document).on('click', '.close img', function() {
+        p.close();
+    });
 
     function resizeIframe() {
         var $if = $('.popup-modal iframe');
-        if($if.length) $if.css("height", ($if.width() / 1.77) + "px");
+        if ($if.length) {
+            $if.css("height", ($if.width() / 1.77) + "px");
+        }
     }
+
     $(window).on('resize', resizeIframe);
 });

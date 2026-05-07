@@ -45,9 +45,6 @@ html, body{
     color: #14171a;
     margin-top: 30px;
     padding: 20px;
-
-
-
 }
 .call-me{
     text-align: center;
@@ -88,7 +85,7 @@ html, body{
     cursor: pointer;
     transition: 0.5s;
 }
-.wrapper-player{
+.player{
     display: none;
 }
 .player iframe{

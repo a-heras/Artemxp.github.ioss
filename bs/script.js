@@ -41,7 +41,7 @@ $(function () {
         p.open($('.wrapper-get-price').html());
     });
 
-    $(document).on('click', '.close img', function() {
+    $(document).on('click', '.close', function() {
         p.close();
     });
 

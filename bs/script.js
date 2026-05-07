@@ -36,13 +36,12 @@ $(function () {
     console.log($('.close img'));
 
 
-
+$(document).on('click', '.close img', function() {
+    p.close();
+});
     $('.button-call-me').on('click', function (){
         var a = $('.wrapper-call-me');
         p.open(a.html());
-        $('.close img').on('click', function (){
-            p.close();
-        });
     });
     function resizeIframe(){
         $('iframe').each(function() {

@@ -36,15 +36,22 @@ html, body{
     cursor: pointer;
     display: none;
 }
-.popup-modal{
+.popup-modal {
     display: none;
     position: fixed;
     z-index: 121;
-    border-radius: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     background: #fff;
-    color: #14171a;
-    margin-top: 30px;
     padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+}
+
+.popup-modal.open {
+    display: block;
 }
 .call-me{
     text-align: center;

@@ -1,70 +1,59 @@
-(function() {
-
+$(function () {
     function Popup(options) {
         var popup = this;
-        popup.overlay = document.querySelector(options.overlay);
-        popup.popupModal = document.querySelector(options.popupModal)
+        popup.overlay = $(options.overlay);
+        popup.popupModal = $(options.popupModal);
 
-        this.open = function (content) {
-            popup.overlay.classList.add('open');
-            popup.popupModal.classList.add('open');
+        this.open = function(content) {
+            popup.popupModal.html(content);
+            popup.overlay.fadeIn(300).addClass('open');
+            popup.popupModal.fadeIn(300).addClass('open');
+            resizeIframe();
+        };
 
-        }
-        this.close = function(){
-            popup.overlay.classList.remove('open');
-            popup.popupModal.classList.remove('open');
-        }
-        popup.overlay.onclick = popup.close;
+        this.close = function() {
+            popup.overlay.fadeOut(200).removeClass('open');
+            popup.popupModal.fadeOut(200).removeClass('open');
+            popup.popupModal.empty(); 
+        };
 
+        popup.overlay.on('click', function() {
+            popup.close();
+        });
     }
 
-    function Check(options) {
-        var check = this;
-        check.form = document.querySelector(options.formCheck);
-        check.input = document.querySelectorAll(options.inputCheck);
-        check.fieldOutputError = document.querySelector(options.fieldOutputError);
-        this.methodCheck = function () {
-            check.form.onsubmit = function (e) {
-                for (var i = 0; i < check.input.length; i++) {
-                  var error = false;
-                  var textError;
-                  check.input[i].value = check.input[i].value.replace(/\s+/g,'');
-                  if(check.input[i].value === ''){
-                      check.input[i].classList.add('popup-form-input-err');
-                      error = true;
-                      textError = 'Внимание! Убедитесь, что контактные данные введены верно.';
-                  }
-                  else{
-                      check.input[i].classList.remove('popup-form-input-err');
-                  }
-                  if (error) {
-                      e.preventDefault();
-                  }
-                  }
-                  if (textError == undefined) {
-                      textError = '';
-                  }
-                check.fieldOutputError.innerHTML = textError;
-
-            }
-        }
-
-    }
     var p = new Popup({
         overlay: '.overlay',
-        popupModal: '.popup-modal',
+        popupModal: '.popup-modal'
     });
-    var check1 = new Check({
-        formCheck: 'form',
-        inputCheck: '.popup-form-input',
-        fieldOutputError: '.popup-form p'
-    });
-    check1.methodCheck();
-    console.log(check1);
-    document.querySelector('.button').onclick = function() {
-        p.open();
-        document.querySelector('span').onclick = function() {
-            p.close();
+
+    $('.play').on('click', function() {
+        var videoUrl = $(this).attr('data-video');
+        var template = $('.wrapper-player').clone();
+        
+        if (videoUrl) {
+            var embedUrl = videoUrl.replace("watch?v=", "embed/");
+            template.find('iframe').attr('src', embedUrl);
         }
-    };
-})();
+        
+        p.open(template.html());
+    });
+
+    $('.button-call-me, .button-price').on('click', function () {
+        var formHtml = $('.wrapper-call-me').html();
+        p.open(formHtml);
+    });
+
+    $(document).on('click', '.close img', function() {
+        p.close();
+    });
+
+    function resizeIframe() {
+        $('.popup-modal iframe').each(function() {
+            var width = $(this).width();
+            $(this).css("height", (width / 1.7777) + "px");
+        });
+    }
+
+    $(window).on('resize', resizeIframe);
+});
